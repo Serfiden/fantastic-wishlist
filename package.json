@@ -1,0 +1,37 @@
+{
+  "name": "wishlist",
+  "version": "1.0.0",
+  "description": "Wishlist app made using React and NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently --kill-others \"nodemon app.js\" && \"webpack-dev-server --mode development\"",
+    "build": "webpack --mode production"
+  },
+  "keywords": [],
+  "author": "Serfiden",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^4.0.1",
+    "css-loader": "^1.0.0",
+    "express": "^4.16.3",
+    "node-sass": "^4.9.3",
+    "nodemon": "^1.18.4",
+    "path": "^0.12.7",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "sass-loader": "^7.1.0",
+    "sequelize": "^4.39.0",
+    "style-loader": "^0.23.0",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^4.1.1",
+    "webpack-cli": "3.1.1"
+  }
+}

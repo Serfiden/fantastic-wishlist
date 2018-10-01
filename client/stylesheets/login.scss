@@ -1,0 +1,61 @@
+$mainColor: #d80057;
+
+.login-container {
+	margin:auto;
+	height:400px;
+	width:279px;
+	background-color:white;
+	border-radius:15px;
+	padding:16px 16px;
+	margin-top: 15%;
+	// text-align:center;
+}
+
+.logo {
+	width: 65%;
+	margin: auto;
+	
+	img {
+		width:100%;
+		height:auto;
+	}
+}
+
+.login-checkbox-container {
+	font-size: 13px;
+	display: block;
+	cursor: pointer;
+	position:relative;
+	padding-left:20px;
+
+	input {
+		position:absolute;
+		opacity: 0;
+		cursor:pointer;
+		display:block;
+	}
+
+	span {
+		position:absolute;
+		top: 0;
+		left: 0;
+		height:15px;
+		width:15px;
+		border:1px solid #e2e2e2;
+		border-radius:5px;
+	}
+
+	span::after {
+		left: 5.3px;
+		top: 1px;
+		width: 3px;
+		height: 7px;
+		border: solid $mainColor;
+		border-width: 0 3px 3px 0;
+		-webkit-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+		content: "";
+		position: absolute;
+	}
+}
