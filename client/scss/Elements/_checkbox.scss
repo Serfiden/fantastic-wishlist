@@ -1,10 +1,10 @@
-$primaryColor: #12cbe8;
+@import '../Default/colors';
 
 @keyframes toChecked {
 	from {
 		background-color: white;
 	} to {
-		background-color: $primaryColor; 
+		background-color: $mainColor; 
 	}
 }
 
