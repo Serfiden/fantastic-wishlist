@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import LoginForm from './Components/LoginForm';
+import { Provider } from './Components/Context';
 
 export default class App extends Component {
 	constructor(props) {
@@ -9,6 +10,9 @@ export default class App extends Component {
 			this.checkbox = el;
 		}
 		this.onCheckboxClick = this.onCheckboxClick.bind(this);
+		this.store = {
+			
+		}
 	}
 
 	onCheckboxClick () {
@@ -21,14 +25,16 @@ export default class App extends Component {
 
 	render() {
 		return (
-			<Switch>
-				<Route 
-					exact path = '/' 
-					component = {LoginForm} />
-				<Route
-					path = '/user'
-					render = {(props) => <User {...props} name = 'Cristi' />} />
-			</Switch>
+			<Provider store = {this.store} >
+				<Switch>
+					<Route 
+						exact path = '/' 
+						component = {LoginForm} />
+					<Route
+						path = '/user'
+						render = {(props) => <User {...props} name = 'Cristi' />} />
+				</Switch>
+			</Provider>
 		)
 	}
 }

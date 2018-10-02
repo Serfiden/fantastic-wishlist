@@ -5,5 +5,6 @@ const port = 3000;
 app.use(express.static('public'));
 
 app.get('/', (req, res) => res.sendFile('/index.html'));
+app.get('/login', (req, res) => res.send('OK'));
 
 app.listen(port, () => console.log('App listening on port ${port}!'));
