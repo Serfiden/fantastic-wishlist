@@ -1,25 +1,34 @@
 import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import LoginForm from './Components/LoginForm';
 
 export default class App extends Component {
 	constructor(props) {
 		super(props);
+		this.setCheckboxRef = el => {
+			this.checkbox = el;
+		}
+		this.onCheckboxClick = this.onCheckboxClick.bind(this);
+	}
+
+	onCheckboxClick () {
+		if (this.checkbox.children[0].checked === true) {
+			this.checkbox.children[1].style.backgroundColor = '#12cbe8';
+		} else {
+			this.checkbox.children[1].style.backgroundColor = 'white';
+		}
 	}
 
 	render() {
 		return (
-			<div className = 'login-container'>
-				<div className = 'logo'>
-					<img src = '/logo.png'/>
-				</div>
-				<input className = 'login-user-input' type = 'text' placeholder = 'Your e-mail address'/>
-				<input className = 'login-password-input' type = 'text' placeholder = 'Password'/>
-				<label className = 'login-checkbox-container'>
-					<input type = 'checkbox' autoComplete = 'off'/>
-					<span />
-					Remember me 
-				</label>
-				<button> LOGIN </button>
-			</div>
+			<Switch>
+				<Route 
+					exact path = '/' 
+					component = {LoginForm} />
+				<Route
+					path = '/user'
+					render = {(props) => <User {...props} name = 'Cristi' />} />
+			</Switch>
 		)
 	}
 }

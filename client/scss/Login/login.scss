@@ -1,0 +1,54 @@
+@import '../Elements/button';
+@import '../Elements/checkbox';
+@import '../Elements/input';
+@import '../Partials/colors';
+
+.login-container {
+	margin:auto;
+	width:279px;
+	background-color:white;
+	border-radius:15px;
+	padding:16px 25px 20px 25px;
+	color: $textColor;
+	margin-top: 15%;
+
+	button {
+		width:100%;
+		border:none;
+		outline:none;
+		border-radius:20px;
+		margin-top:40px;
+		background-color:$mainColor;
+		color:white;
+		text-align:center;
+		font-size:15px;
+		font-weight:500;
+		padding:8px;
+		font-family:'Montserrat', sans-serif;
+	}
+
+	button:hover {
+		cursor:pointer;
+	}
+
+	a {
+		display: block;
+		text-align: center;
+		text-decoration: none;
+		color: $textColor;
+		margin-top:25px;
+		font-size: 12px;
+		font-weight:300;
+	}
+}
+
+.logo {
+	width: 65%;
+	margin: auto;
+	
+	img {
+		width:100%;
+		height:auto;
+	}
+}
+

@@ -1,23 +1,10 @@
-$mainColor: #d80057;
+$primaryColor: #12cbe8;
 
-.login-container {
-	margin:auto;
-	height:400px;
-	width:279px;
-	background-color:white;
-	border-radius:15px;
-	padding:16px 16px;
-	margin-top: 15%;
-	// text-align:center;
-}
-
-.logo {
-	width: 65%;
-	margin: auto;
-	
-	img {
-		width:100%;
-		height:auto;
+@keyframes toChecked {
+	from {
+		background-color: white;
+	} to {
+		background-color: $primaryColor; 
 	}
 }
 
@@ -26,7 +13,14 @@ $mainColor: #d80057;
 	display: block;
 	cursor: pointer;
 	position:relative;
-	padding-left:20px;
+	padding-left:25px;
+	margin-top:30px;
+	font-weight:300;
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
 
 	input {
 		position:absolute;
@@ -36,6 +30,7 @@ $mainColor: #d80057;
 	}
 
 	span {
+		background-color:white;
 		position:absolute;
 		top: 0;
 		left: 0;
@@ -50,7 +45,7 @@ $mainColor: #d80057;
 		top: 1px;
 		width: 3px;
 		height: 7px;
-		border: solid $mainColor;
+		border: solid white;
 		border-width: 0 3px 3px 0;
 		-webkit-transform: rotate(45deg);
 		-ms-transform: rotate(45deg);
@@ -58,4 +53,5 @@ $mainColor: #d80057;
 		content: "";
 		position: absolute;
 	}
+
 }

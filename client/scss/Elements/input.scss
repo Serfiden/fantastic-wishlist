@@ -1,0 +1,58 @@
+@import '../Partials/colors';
+
+@keyframes extend {
+	from {
+		width: 0%;
+	} to {
+		width: 100%;
+	}
+}
+
+.input-container {
+	padding-bottom:6px;
+	margin-top: 40px;
+	font-size:13px;
+	position:relative;
+
+	i {
+		display:inline-block;
+	}
+
+	input {
+		border: none;
+		outline: none;
+		position:relative;
+		display:inline-block;
+		width: (279px - 42px) / 279px * 100%;
+		left:10px;
+	}
+
+	.bar {
+		display:block;
+		background-color:$secondaryColor;
+		margin-top:7px;
+		height:1px;
+		width:100%;
+		position:relative;
+		text-align:center;
+	}
+
+	.bar::after {
+		display:block;
+		content: "";
+		z-index:1;
+		position:relative;
+		margin:auto;
+		left:0;
+		top:0;
+		background-color: $mainColor;
+		width: 0;
+		height:2px;
+	}
+
+	input:focus ~ .bar::after {
+		animation-name: 'extend';
+		animation-duration: .3s;
+		animation-fill-mode: forwards;
+	}
+}

@@ -1,4 +1,4 @@
-@import 'login';
+@import 'Login/login';
 
 body {
 	margin: 0;
@@ -22,3 +22,6 @@ body {
 	text-align: center;
 }
 
+::placeholder {
+	font-family: 'Montserrat', sans-serif;
+}
