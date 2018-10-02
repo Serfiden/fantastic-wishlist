@@ -20,7 +20,7 @@ export default class Checkbox extends Component {
 
 	 render() {
 	 	return (
-	 		<label className = 'login-checkbox-container' ref = {this.setCheckboxRef}>
+	 		<label className = 'checkbox-container' ref = {this.setCheckboxRef}>
 				<input type = 'checkbox' autoComplete = 'off' onClick = {this.onCheckboxClick}/>
 				<span />
 				{this.props.text} 
