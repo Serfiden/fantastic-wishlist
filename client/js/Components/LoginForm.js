@@ -16,7 +16,7 @@ export default class LoginForm extends Component {
 				<Input type = 'USERNAME' placeholder = 'Your e-mail address' />
 				<Input type = 'PASSWORD' placeholder = 'Password' />
 				<Checkbox text = 'Remember me' />
-				<button> LOGIN </button>
+				<button className = 'large-button'> LOGIN </button>
 				<a href = "#"> Forgot your password? </a>
 			</div>
 		)

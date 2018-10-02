@@ -1,0 +1,20 @@
+@import '../Default/colors';
+
+.large-button {
+	width:100%;
+	border:none;
+	outline:none;
+	border-radius:20px;
+	margin-top:40px;
+	background-color:$mainColor;
+	color:white;
+	text-align:center;
+	font-size:15px;
+	font-weight:500;
+	padding:8px;
+	font-family:'Montserrat', sans-serif;
+}
+
+.large-button:hover {
+	cursor:pointer;
+}
